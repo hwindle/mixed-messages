@@ -1,5 +1,5 @@
-msgBits = {
-  animals = [
+const msgBits = {
+  animals: [
     'cow',
     'sheep',
     'chicken',
@@ -9,7 +9,7 @@ msgBits = {
     'giraffe',
     'rainbow trout'
   ],
-  foods = [
+  foods: [
     'grass',
     'lettuce',
     'sweetcorn',
@@ -19,7 +19,7 @@ msgBits = {
     'flies',
     'shrimp'
   ],
-  feelings = [
+  feelings: [
     'unhappy 🙁',
     'happy 🙂',
     'depressed 😩',
@@ -27,7 +27,7 @@ msgBits = {
     'silly 😛',
     'elated 😄'
   ],
-  picUrls = [
+  picUrls: [
     'pics/01_cow.jpg',
     'pics/02_sheep.jpg',
     'pics/03_chicken.jpg',
@@ -51,13 +51,13 @@ function displayRandomMsgHTML(obj) {
     Returns an innerHTML string, with span classes */
 
   let result = `This is a <span class="animal">${obj.animal}</span> eating some <span class="food">${obj.food}</span> and feeling <span class="mood">${obj.feeling}</span>`;  
-  return document.getElementById('msg-js').innerHTML(result);
+  return document.getElementById('msg-js').innerHTML = result;
 }
 
 const fakeAnimal = { 
   animal: 'penguin', 
   food: 'herring', 
-  feeling: 'silly' 
+  feeling: 'silly 😛' 
 };
 
 displayRandomMsgHTML(fakeAnimal);
