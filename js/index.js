@@ -51,7 +51,7 @@ function displayRandomMsgHTML(obj) {
     Returns an innerHTML string, with span classes */
 
   let result = `This is a <span class="animal">${obj.animal}</span> eating some <span class="food">${obj.food}</span> and feeling <span class="mood">${obj.feeling}</span>`;  
-  document.getElementById('img-animal').setAttribute(src, obj.pic);
+  document.getElementById('img-animal').setAttribute('src', obj.pic);
   return document.getElementById('msg-js').innerHTML = result;
 }
 
@@ -71,3 +71,8 @@ function messageCreate(msgBits) {
 }
 
 displayRandomMsgHTML(messageCreate(msgBits));
+
+function changeMsg() {  
+  displayRandomMsgHTML(messageCreate(msgBits));
+}
+
