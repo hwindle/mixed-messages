@@ -38,3 +38,26 @@ msgBits = {
     'pics/08_trout.jpg'
   ]
 };
+
+function getRandomNum(arrLength) {
+  if (arrLength <= 0) return undefined;
+
+  return Math.floor(Math.random() * arrLength);
+}
+
+function displayRandomMsgHTML(obj) {
+  /* Takes in obj with animal, food, feelings, pic
+
+    Returns an innerHTML string, with span classes */
+
+  let result = `This is a <span class="animal">${obj.animal}</span> eating some <span class="food">${obj.food}</span> and feeling <span class="mood">${obj.feeling}</span>`;  
+  return document.getElementById('msg-js').innerHTML(result);
+}
+
+const fakeAnimal = { 
+  animal: 'penguin', 
+  food: 'herring', 
+  feeling: 'silly' 
+};
+
+displayRandomMsgHTML(fakeAnimal);
